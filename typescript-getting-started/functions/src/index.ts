@@ -29,6 +29,7 @@ admin.initializeApp();
 
 export const helloWorld = functions.https.onRequest(async (request, response) => {
     const firestore = admin.firestore();
+    const users = await firestore.collection('users').get();
     // const users = await firestore.collection('users').get();
     // response.send({users});
     response.send('hello world');

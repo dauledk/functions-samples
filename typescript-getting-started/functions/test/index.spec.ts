@@ -32,6 +32,15 @@ describe('Cloud Functions', () => {
 
     describe('Getting typescript tests up and running', () => {
         it('Testing Typescript function, hello world!', (done) => {
+            const firestoreStub = sinon.stub();
+            Object.defineProperty(admin, 'firestore', {
+                get: () => {
+                    return {
+                        collection: (path) => Promise.resolve({mocka: 'user'})
+                    }
+                }
+            });
+
             const req = {} as any;
             const res = {
                 send: (object: any) => {
