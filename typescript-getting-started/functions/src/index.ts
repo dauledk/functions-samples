@@ -18,7 +18,8 @@
 import * as functions from 'firebase-functions'
 
 // if you need to use the Firebase Admin SDK, uncomment the following:
-// import * as admin from 'firebase-admin'
+import * as admin from 'firebase-admin'
+admin.initializeApp();
 
 
 // Create and Deploy Cloud Function with TypeScript using script that is
@@ -26,6 +27,10 @@ import * as functions from 'firebase-functions'
 //    cd functions
 //    npm run deploy
 
-export const helloWorld = functions.https.onRequest((request, response) => {
- response.send('Hello from Firebase!\n\n');
+export const helloWorld = functions.https.onRequest(async (request, response) => {
+    const firestore = admin.firestore();
+    // const users = await firestore.collection('users').get();
+    // response.send({users});
+    response.send('hello world');
+    return;
 });
