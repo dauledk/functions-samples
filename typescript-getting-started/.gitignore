@@ -61,5 +61,6 @@ typings/
 .env
 
 functions/test/eddystone-test.json
+functions/test/app-engine-test.json
 **/*.js
 **/*.DS_Store

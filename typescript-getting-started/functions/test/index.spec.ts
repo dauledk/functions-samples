@@ -1,10 +1,11 @@
 import { join } from 'path';
 
+console.log(join(__dirname, `./app-engine-test.json`))
 const test = require('firebase-functions-test')({
     databaseURL: 'https://eddystone-test-e4cd3.firebaseio.com',
     storageBucket: 'eddystone-test-e4cd3.appspot.com',
     projectId: 'eddystone-test-e4cd3',
-}, join(__dirname, `./eddystone-test.json`));
+}, join(__dirname, `./app-engine-test.json`));
 
 import { expect, assert } from 'chai';
 
