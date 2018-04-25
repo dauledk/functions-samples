@@ -1,0 +1,13 @@
+{
+  "name": "typescript-getting-started",
+  "version": "1.0.0",
+  "description": "This is an example Firebase project for using [TypeScript](https://www.typescriptlang.org/) with [Cloud Functions for Firebase](https://firebase.google.com/products/functions).",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd functions && npm run -s test",
+    "issue-13": "docker build -t firebase-functions ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

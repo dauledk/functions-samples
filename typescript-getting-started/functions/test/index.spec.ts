@@ -5,7 +5,7 @@ const test = require('firebase-functions-test')({
     databaseURL: 'https://eddystone-test-e4cd3.firebaseio.com',
     storageBucket: 'eddystone-test-e4cd3.appspot.com',
     projectId: 'eddystone-test-e4cd3',
-}, join(__dirname, `./app-engine-test.json`));
+}, join(__dirname, `./app-engine-issue.json`));
 
 import { expect, assert } from 'chai';
 
@@ -19,6 +19,7 @@ describe('Cloud Functions', () => {
     it('Testing read users', async () => {
         try {
             console.log('Now testing: read users');
+            console.log(process.env.GOOGLE_APPLICATION_CREDENTIALS);
             const result = await readUsers.readUsersFromFirestore();
             console.log(result);
         } catch (err) {

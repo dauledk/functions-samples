@@ -1,0 +1,7 @@
+node_modules
+npm-debug.log
+functions/npm-debug.log
+functions/node_modules
+functions/test/app-engine-test.json
+.git
+.gitignore
